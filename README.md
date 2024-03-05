@@ -46,7 +46,7 @@ The hashing process goal is to generate a smaller number for the hash index comp
 
 Image retrieved from: https://www.geeksforgeeks.org/what-is-hashing/
 
-My program was created using 4 different files: main.cpp, hash.cpp, hash.hpp, complex_hash.cpp. Here is what each one of the files do:
+My program was created using 5 different files: main.cpp, hash.cpp, hash.hpp, main_complex.cpp, and complex_hash.cpp. Here is what each one of the files do:
 
 ...........................................
 
@@ -114,6 +114,11 @@ Complex_hash.cpp:
 
 To make my hashable program complex, I decided to implement double hashing. Double hashing is another way to solve for collision. In double hashing, two different hash functions are used. The first hash function determines the initial index where the key should be placed. If a collision occurs at that index, a second hash function is applied to the key to determine an offset, which is then used to probe for another index in the hash table. This process continues until an empty slot is found.
 
+...........................................
+
+Main_complex.cpp:
+
+This is the testing file for the complex hashtable program. I will run the same tests that I ran on main.cpp, but now I expect the results to be slightly different. When I plug in two values with the same hash index, I don't want one to overwritte the other, instead I want one to run through another hash function for it to be stored in another slot of the hash table.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
