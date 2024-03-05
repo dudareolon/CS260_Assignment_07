@@ -88,13 +88,23 @@ The add function will start by finding the hash index value of the string value 
 The search function also finds the has index of the value inserted. Then it goes to that index location of the array storage and compares if the string there is the same as the input string. If it is then it returns true, if it is not equal then it returns false. 
 
 
-toString is a function that turns the hash table into a displayable string. It does it by using the stringstream data structure which is a string that can be altered. But a stringstream can't be returned out of a function, so much turn it into a normal string before returning. The function iterates through the entire storage array printing out the value at each one of its indexes and separating them with commas
+toString is a function that turns the hash table into a displayable string. It does it by using the stringstream data structure which is a string that can be altered. But a stringstream can't be returned out of a function, so much turn it into a normal string before returning. The function iterates through the entire storage array printing out the value at each one of its indexes and separating them with commas. This function was created with the intent to be used during tests. 
 
 
 ...........................................
 
 Main.cpp:
 
+This is the testing file of the program. The test I want to run are:
+
+- Create an empty Hash Table 
+- Add a string to the hash table in its correct has index
+- Add a second string to the hash table in its correct has index
+- Search for a string that is in the hash table
+- Search for a string that is not in the hash table
+- Collision: when a string is added in an index that alreadu has a string
+
+All the tests succeeded so I understand my code is running as I wanted it to.
 
 ...........................................
 
