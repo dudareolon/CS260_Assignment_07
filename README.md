@@ -114,6 +114,9 @@ Complex_hash.cpp:
 
 To make my hashable program complex, I decided to implement double hashing. Double hashing is another way to solve for collision. In double hashing, two different hash functions are used. The first hash function determines the initial index where the key should be placed. If a collision occurs at that index, a second hash function is applied to the key to determine an offset, which is then used to probe for another index in the hash table. This process continues until an empty slot is found.
 
+
+This file is the same as the hash.cpp file but with two differences. The add function is different and there is a second hash function. The hash2 function does the same as hash but when it returns the result, it returns it as result+1. It adds 1 to ensure that the second hash value is never 0. If the result was 0 there could be certain cases where the hashing would be stuck in an infinite loop since you can't alter the number 0. The add function difference is that it now checks for collision. It checks for collision through checking if the slot in the storage array is not empty or if the value that is already stored is not the same as the one we are trying to add, if both of these are true then there is collision. If there is collision it will resolve it by using double hashing, if there is not collision, it will simply add the value like it was normally doinh. In my version of double hashing both index values obtained from hash1 and hash2 are added together and the sum modules with the capacity so that it stays withing range.
+
 ...........................................
 
 Main_complex.cpp:
@@ -186,6 +189,10 @@ Here is the Hash logic:
 
 - Smarter hashtable (double hashing or chaining) including at least the same functions as the simple hashtable:
 
-  ![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/a8cf745c-5434-4424-88c6-140b9aff79df)
+![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/c1bd033f-a7c1-4dd0-b3a9-6b8bd5543f46)
+
+
+![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/088d892f-fb30-478f-af90-b242f3d0250f)
+
 
 
