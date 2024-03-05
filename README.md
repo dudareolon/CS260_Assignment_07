@@ -44,11 +44,23 @@ The hashing process goal is to generate a smaller number for the hash index comp
 
 Image retrieved from: https://www.geeksforgeeks.org/what-is-hashing/
 
-My program was created using 4 different files: main.cpp, hash.cpp, hash.h, complex_hash.cpp. Here is what each one of the files do:
+My program was created using 4 different files: main.cpp, hash.cpp, hash.hpp, complex_hash.cpp. Here is what each one of the files do:
 
 ...........................................
 
-Hash.h:
+Hash.hpp:
+
+This file will define the class HashTable. The public elements of the class will be:
+    - HashTable(int initialCapacity); // creates the initial HashTable with the capacity of elements that it can take.
+    - int hash(string key); // this is the hash function, it will take an input string key and output the integer value of the hash index of the key
+    - int add(string key); // adds a new string value to the hash table
+    - bool search(string key); // search if a value is in the hash table, if it is then return true, if it is not then return false 
+    - string toString(); // turn the hash table into a string with all the values in it
+    
+and the private elements will be:
+    - int capacity = 10; // sets the capacity of the hash table to be 10 elements
+    - int size = 0; // initiates the hash table with 0 elements
+    - string *storage = nullptr; //there will be a storage array, but at this point the storage hasn't been created yet, so currently the pointer string points at nullptr but later that will be the storage of the storage
 
 
 ...........................................
@@ -71,9 +83,19 @@ Complex_hash.cpp:
 
 Complexity Analysis:
 
-Now the question arises if Array was already there, what was the need for a new data structure! The answer to this is in the word “efficiency“. Though storing in Array takes O(1) time, searching in it takes at least O(log n) time. This time appears to be small, but for a large data set, it can cause a lot of problems and this, in turn, makes the Array data structure inefficient.
+Though storing in Array takes O(1) time, searching in it takes at least O(log n) time. This time appears to be small, but for a large data set, it can cause a lot of problems and this, in turn, makes the Array data structure inefficient.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Requirements:
+
+- Hashtable that resolves collisions by simply overwriting the old value with the new value:
+
+- Describe the way that you decide on hashing a value: 
+
+- An insert function that places the value at the appropriate location based on its hash value:
+
+- A contains function that returns whether the value is already in the hashtable:
+
+- Smarter hashtable (double hashing or chaining) including at least the same functions as the simple hashtable:
 
