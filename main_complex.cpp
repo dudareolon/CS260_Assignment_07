@@ -75,9 +75,10 @@ int main() {
     // For 'u': result += (int)'u' = 117.
     // After the loop, result is 100 + 117 + 100 + 97 = 414.
     // Take the modulus of result with the capacity of the hash table (let's assume it's 10): 414 % 10 = 4.
+    //  but since now we are double hashing this will not be store in its original index 4 anymore
     cout << endl;
 
-
+    // tested the double hashing again and it worked!
     result = ht.add("dFrien");
     cout << "Add dFrien (in the index " << result << ")." << endl;
     cout << "table contents (three entries): " << ht.toString() << endl;
