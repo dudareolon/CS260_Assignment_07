@@ -11,6 +11,7 @@ class HashTable {
 public:
     HashTable(int initialCapacity); // creates the initial HashTable with the capacity of elements that it can take.
     int hash(string key); // this is the hash function, it will take an input string key and output the integer value of the hash index of the key
+    int hash2(string key); // used for double hashing
     int add(string key); // adds a new string value to the hash table
     bool search(string key); // search if a value is in the hash table, if it is then return true, if it is not then return false 
     string toString(); // turn the hash table into a string with all the values in it
