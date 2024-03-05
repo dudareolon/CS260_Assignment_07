@@ -99,7 +99,34 @@ Requirements:
 
 - Hashtable that resolves collisions by simply overwriting the old value with the new value:
 
-- Describe the way that you decide on hashing a value: 
+- Describe the way that you decide on hashing a value: The hash value is calculated by iterating through all the characters in a string and adding their ASCII integer value. Each character in the ASCII table as you can see below is equivalent to an integer number.
+
+  ![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/f36c354b-1454-47a8-bde6-b3fd49df6590)
+
+It is important to notice that lower case and upper case of the same letter have different ASCII values, so for example, imputting the string "Cats" will have a different hash value compared to inputting "cats".
+
+After completing the sum of all characters' ASCII vlaues, the result is divided by 10, and the remainder of this division is the hash value of that string input. This operation of finding the remainder after dividing by 10 can be done very easily by using the modules operation, which is "ASCII sum % 10"
+
+Here is a worked out example. I want to insert the word "cactus":
+
+Iterate over each character in the string using a loop:
+
+For 'c': result += (int)'c' = 99.
+
+For 'a': result += (int)'a' = 97.
+
+For 'c': result += (int)'c' = 99.
+
+For 't': result += (int)'t' = 116.
+
+For 'u': result += (int)'u' = 117.
+
+For 's': result += (int)'s' = 115.
+
+After the loop, result is 99 + 97 + 99 + 116 + 117 + 115 = 643.
+
+Take the modulus of result with the capacity of the hash table (10): 643 % 10 = 3. So, the hash value for the string "cactus" would be 3 in this case.
+
 
 - An insert function that places the value at the appropriate location based on its hash value:
 
