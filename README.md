@@ -112,6 +112,8 @@ All the tests succeeded so I understand my code is running as I wanted it to.
 
 Complex_hash.cpp:
 
+To make my hashable program complex, I decided to implement double hashing. Double hashing is another way to solve for collision. In double hashing, two different hash functions are used. The first hash function determines the initial index where the key should be placed. If a collision occurs at that index, a second hash function is applied to the key to determine an offset, which is then used to probe for another index in the hash table. This process continues until an empty slot is found.
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
