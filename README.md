@@ -114,6 +114,12 @@ Requirements:
 
 - Hashtable that resolves collisions by simply overwriting the old value with the new value:
 
+![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/2862d6f4-4600-41c6-9920-4be036acc83b)
+  
+
+![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/d0f01628-5e20-4338-b26e-ba2be0ad5f78)
+
+
 - Describe the way that you decide on hashing a value: The hash value is calculated by iterating through all the characters in a string and adding their ASCII integer value. Each character in the ASCII table as you can see below is equivalent to an integer number.
 
   ![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/f36c354b-1454-47a8-bde6-b3fd49df6590)
@@ -145,7 +151,19 @@ Take the modulus of result with the capacity of the hash table (10): 643 % 10 = 
 
 - An insert function that places the value at the appropriate location based on its hash value:
 
-- A contains function that returns whether the value is already in the hashtable:
+  ![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/10b3835c-96e3-4902-9870-a81406eb78af)
+
+Here is the Hash logic:
+
+  ![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/27d6de0c-10a8-4a55-a088-276205bbed19)
+
+
+
+- A contains (changed for a search) function that returns whether the value is already in the hashtable:
+
+![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/1808e14f-915b-4083-bde4-87ba19f9819a)
+
+  
 
 - Smarter hashtable (double hashing or chaining) including at least the same functions as the simple hashtable:
 
