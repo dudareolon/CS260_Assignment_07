@@ -186,3 +186,6 @@ Here is the Hash logic:
 
 - Smarter hashtable (double hashing or chaining) including at least the same functions as the simple hashtable:
 
+  ![image](https://github.com/dudareolon/CS260_Assignment_07/assets/102680672/a8cf745c-5434-4424-88c6-140b9aff79df)
+
+
