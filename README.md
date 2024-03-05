@@ -128,7 +128,11 @@ This is the testing file for the complex hashtable program. I will run the same 
 
 Complexity Analysis:
 
-Though storing in Array takes O(1) time, searching in it takes at least O(log n) time. This time appears to be small, but for a large data set, it can cause a lot of problems and this, in turn, makes the Array data structure inefficient.
+What a hash table essentially could be done by an array, the difference however is on the efficiency of it. Through storing in Array takes O(1) time, searching in it takes at least O(log n) time. This time appears to be small, but for a large data set, it can cause a lot of problems and this, in turn, makes the Array data structure inefficient. On the other hand, in a well-implemented hash table, storing and searching typically take O(1) time on average, assuming a good hash function and proper handling of collisions. This means that regardless of the size of the data set, the time taken to perform these operations remains constant, making hash tables very efficient for large data sets. 
+
+Collisions can be handled in two ways: open addressing (for example double hashing) or separate chaining. With open addressing methods, collisions occur more frequently, because these techniques look for an alternative indice when collision happens which can be extremely hard once the hashtable is near its capacity. On the other hand, the separata chaining methods have way less collisions since each index of the hashtable is able to store more than one value, this reduces significantly the chances of collisions. The least amount of collisions, the less complex the system is. 
+
+The add and search functions using open addressing methods are on their best scenario an O(1), but as collisiosn start to occur (and they occur each value added more) the big O notation turns to being O(n) which is not desirable. The add and search functions using the seperate chaining methods however are much more desirable, since the collisions barely occur anymore we can say that the big O notation for it is O(1) which is extremely efficient.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
