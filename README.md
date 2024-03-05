@@ -105,7 +105,7 @@ Requirements:
 
 It is important to notice that lower case and upper case of the same letter have different ASCII values, so for example, imputting the string "Cats" will have a different hash value compared to inputting "cats".
 
-After completing the sum of all characters' ASCII vlaues, the result is divided by 10, and the remainder of this division is the hash value of that string input. This operation of finding the remainder after dividing by 10 can be done very easily by using the modules operation, which is "ASCII sum % 10"
+After completing the sum of all characters' ASCII vlaues, the result is divided by 10 (the capacity of my hash table), and the remainder of this division is the hash value of that string input. This operation of finding the remainder after dividing by 10 can be done very easily by using the modules operation, which is "ASCII sum % 10"
 
 Here is a worked out example. I want to insert the word "cactus":
 
