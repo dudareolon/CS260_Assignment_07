@@ -75,6 +75,21 @@ and the private elements will be:
 
 Hash.cpp:
 
+The first step is initializes the Hash Table under the class requirements.
+The capacity is how many slots are available in the table and is set to whatever the user wants. This way the same code can be reused for different amounts of data. The Hash Table starts empty. Then create an array called storage of the size capacity that will serve as storage for the string values input in the HT
+
+
+Next step is to define what the hash function is. It start variable that will store the ASCII sum result. Then it iterates through all characters of the inserted value, adding the ASCII (int) value of all characters in the string. Takes the modulus of the result with the capacity of the hash table, which ensures that the hash value falls within the range of the hash table's capacity. Lastly, return the hash index.
+
+
+The add function will start by finding the hash index value of the string value inserted. It will check in the storage array for the slot of hash index if that spot is not empty or if that value in that spot is not the same the add function is trying to input. If both of these are true, then collision has happened. The collision is not important for the program yet, since we are simply replace the value in the collision, but it will be important later. Independently of the collision, it will store the value at the storage[hash_index] location. 
+
+
+The search function also finds the has index of the value inserted. Then it goes to that index location of the array storage and compares if the string there is the same as the input string. If it is then it returns true, if it is not equal then it returns false. 
+
+
+toString is a function that turns the hash table into a displayable string. It does it by using the stringstream data structure which is a string that can be altered. But a stringstream can't be returned out of a function, so much turn it into a normal string before returning. The function iterates through the entire storage array printing out the value at each one of its indexes and separating them with commas
+
 
 ...........................................
 
