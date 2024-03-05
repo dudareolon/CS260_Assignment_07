@@ -98,11 +98,11 @@ Main.cpp:
 This is the testing file of the program. The test I want to run are:
 
 - Create an empty Hash Table 
-- Add a string to the hash table in its correct has index
-- Add a second string to the hash table in its correct has index
+- Add a string to the hash table in its correct hash index
+- Add a second string to the hash table in its correct hash index
 - Search for a string that is in the hash table
 - Search for a string that is not in the hash table
-- Collision: when a string is added in an index that alreadu has a string
+- Collision: when a string is added in an index that already has a string
 
 All the tests succeeded so I understand my code is running as I wanted it to.
 
