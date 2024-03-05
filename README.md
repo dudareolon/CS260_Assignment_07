@@ -13,6 +13,8 @@ The goal of this assignment is to create a hashtable that resolves collisions by
 
 The second goal of this assignment is to also create a smarter hashtable (double hashing or chaining) including at least the same functions as the simple hashtable.
 
+PS: I thought I was doing all my codes in this repository. But instead I was doing them on my private testing repository. That is why there is only one commit to this code. If you would like to see all my commits I will gladly share my private testing repository with you. I apologize for the mistake. 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Design: 
